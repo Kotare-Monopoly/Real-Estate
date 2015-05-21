@@ -21,9 +21,9 @@ namespace RealEstate.Controllers.v1
 
         // GET: api/Properties/5
         [ResponseType(typeof(Property))]
-        public async Task<IHttpActionResult> GetProperty(string id)
+        public async Task<IHttpActionResult> GetProperty(int id)
         {
-            Property property = await db.Properties.FindAsync(id);
+            Property property = await db.Properties.SingleOrDefaultAsync(p => p.LocationId == id);
             if (property == null)
             {
                 return NotFound();
