@@ -2,10 +2,7 @@ using RealEstate.Models;
 
 namespace RealEstate.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<RealEstate.Models.RealEstateDbContext>
     {
@@ -17,35 +14,35 @@ namespace RealEstate.Migrations
         protected override void Seed(RealEstate.Models.RealEstateDbContext context)
         {
             context.Properties.AddOrUpdate(
-                p => p.Name,
-                new Property { Name = "Old Kent Road", BasePrice = 60 },
-                new Property { Name = "Whitechapel Road", BasePrice = 60 },
-                new Property { Name = "The Angel Islington", BasePrice = 100 },
-                new Property { Name = "Euston Road", BasePrice = 100},
-                new Property { Name = "Pentonville Road", BasePrice = 120 },
-                new Property { Name = "Pall Mall", BasePrice = 140 },
-                new Property { Name = "Whitehall", BasePrice = 140 },
-                new Property { Name = "Northumberland Avenue", BasePrice = 160 },
-                new Property { Name = "Bow Street", BasePrice = 180 },
-                new Property { Name = "Marlborough Street", BasePrice = 180 },
-                new Property { Name = "Vine Street", BasePrice = 200 },
-                new Property { Name = "The Strand", BasePrice = 220 },
-                new Property { Name = "Fleet Street", BasePrice = 220 },
-                new Property { Name = "Trafalgar Square", BasePrice = 240 },
-                new Property { Name = "Leicester Square", BasePrice = 260 },
-                new Property { Name = "Coventry Street", BasePrice = 260 },
-                new Property { Name = "Piccadilly", BasePrice = 280 },
-                new Property { Name = "Regent Street", BasePrice = 300 },
-                new Property { Name = "Oxford Street", BasePrice = 300 },
-                new Property { Name = "Bond Street", BasePrice = 320 },
-                new Property { Name = "Park Lane", BasePrice = 350 },
-                new Property { Name = "Mayfair", BasePrice = 400 },
-                new Property { Name = "King's Cross Station", BasePrice = 200 },
-                new Property { Name = "Marylebone Station", BasePrice = 200 },
-                new Property { Name = "Fenchurch St Station", BasePrice = 200 },
-                new Property { Name = "Liverpool Street Station", BasePrice = 200 },
-                new Property { Name = "Electric Company", BasePrice = 150 },
-                new Property { Name = "Water Works", BasePrice = 150 }
+                p => p.Hours,
+                new Property { Id = 1, Hours = 60 },
+                new Property { Id = 3, Hours = 60 },
+                new Property { Id = 5, Hours = 200 },
+                new Property { Id = 6, Hours = 100},
+                new Property { Id = 8, Hours = 100 },
+                new Property { Id = 9, Hours = 120 },
+                new Property { Id = 11, Hours = 140 },
+                new Property { Id = 12, Hours = 150 },
+                new Property { Id = 13, Hours = 140 },
+                new Property { Id = 14, Hours = 160 },
+                new Property { Id = 15, Hours = 200 },
+                new Property { Id = 16, Hours = 180 },
+                new Property { Id = 18, Hours = 180 },
+                new Property { Id = 19, Hours = 200 },
+                new Property { Id = 21, Hours = 220 },
+                new Property { Id = 23, Hours = 220 },
+                new Property { Id = 24, Hours = 240 },
+                new Property { Id = 25, Hours = 200 },
+                new Property { Id = 26, Hours = 260 },
+                new Property { Id = 27, Hours = 260 },
+                new Property { Id = 28, Hours = 150 },
+                new Property { Id = 29, Hours = 280 },
+                new Property { Id = 31, Hours = 300 },
+                new Property { Id = 32, Hours = 300 },
+                new Property { Id = 34, Hours = 320 },
+                new Property { Id = 35, Hours = 200 },
+                new Property { Id = 37, Hours = 350 },
+                new Property { Id = 39, Hours = 400 }
             );
         }
     }

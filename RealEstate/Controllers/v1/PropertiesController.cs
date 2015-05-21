@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
@@ -36,14 +34,14 @@ namespace RealEstate.Controllers.v1
 
         // PUT: api/Properties/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutProperty(string id, Property property)
+        public async Task<IHttpActionResult> PutProperty(int id, Property property)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != property.Name)
+            if (id != property.Id)
             {
                 return BadRequest();
             }
@@ -86,7 +84,7 @@ namespace RealEstate.Controllers.v1
             }
             catch (DbUpdateException)
             {
-                if (PropertyExists(property.Name))
+                if (PropertyExists(property.Id))
                 {
                     return Conflict();
                 }
@@ -96,7 +94,7 @@ namespace RealEstate.Controllers.v1
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = property.Name }, property);
+            return CreatedAtRoute("DefaultApi", new { id = property.Id }, property);
         }
 
         // DELETE: api/Properties/5
@@ -124,9 +122,9 @@ namespace RealEstate.Controllers.v1
             base.Dispose(disposing);
         }
 
-        private bool PropertyExists(string id)
+        private bool PropertyExists(int id)
         {
-            return db.Properties.Count(e => e.Name == id) > 0;
+            return db.Properties.Count(e => e.Id == id) > 0;
         }
     }
 }

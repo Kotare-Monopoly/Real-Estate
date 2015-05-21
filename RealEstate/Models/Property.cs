@@ -8,9 +8,8 @@ namespace RealEstate.Models
 {
     public class Property
     {
-        [Key]
-        public string Name { get; set; }
-        public int BasePrice { get; set; }
+        public int Id { get; set; }
+        public int Hours { get; set; }
 
     }
 }
