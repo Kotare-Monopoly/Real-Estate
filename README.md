@@ -1,24 +1,28 @@
 # API documentation
 
-Properties are indexed by name, not by id. The name may contain a single space, but otherwise is alphanumeric. The version may change, but other aspects of the URI can be relied upon.
+Properties are indexed by id. The version may change, but other aspects of the URI can be relied upon. Board is indexed from 0 - 39, where 0 is GO.
 
-## /api/v1/properties/mayfair
+## GET /api/v1/properties/1
 
     {
-      "Name":"Mayfair",
-      "BasePrice":400
+     "Id: 1",
+     "Hours: 60
     }
 
-## /api/v1/properties
+## GET /api/v1/properties
 
     [
       {
-        "Name":"Bond Street",
-        "BasePrice":320
+         "Id": 1,
+         "Hours": 60
       },
       {
-        "Name":"Bow Street",
-        "BasePrice":180
+         "Id: 3",
+         "Hours: 60
+      },
+      {
+          "Id: 5",
+          "Hours: 200
       },
       ...
     ]
