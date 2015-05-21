@@ -132,6 +132,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505210045308_properties-added.cs" />
+    <Compile Include="Migrations\201505210045308_properties-added.Designer.cs">
+      <DependentUpon>201505210045308_properties-added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505210047410_properties-added-and-dbset.cs" />
+    <Compile Include="Migrations\201505210047410_properties-added-and-dbset.Designer.cs">
+      <DependentUpon>201505210047410_properties-added-and-dbset.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Property.cs" />
     <Compile Include="Models\RealEstateDbContext.cs" />
@@ -153,6 +161,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201505210045308_properties-added.resx">
+      <DependentUpon>201505210045308_properties-added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505210047410_properties-added-and-dbset.resx">
+      <DependentUpon>201505210047410_properties-added-and-dbset.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
