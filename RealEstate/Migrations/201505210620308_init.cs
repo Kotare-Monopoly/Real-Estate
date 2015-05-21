@@ -12,6 +12,7 @@ namespace RealEstate.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        LocationId = c.Int(nullable: false),
                         Hours = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);

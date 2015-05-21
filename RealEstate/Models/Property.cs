@@ -9,7 +9,7 @@ namespace RealEstate.Models
     public class Property
     {
         public int Id { get; set; }
+        public int LocationId { get; set; }
         public int Hours { get; set; }
-
     }
 }
