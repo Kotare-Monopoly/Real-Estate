@@ -21,7 +21,14 @@ namespace RealEstate.Models
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         public virtual DbSet<Property> Properties { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("realestate");
+        }
     }
+
+    
 
     //public class MyEntity
     //{

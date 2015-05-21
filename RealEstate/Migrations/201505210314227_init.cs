@@ -3,12 +3,12 @@ namespace RealEstate.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class propertiesaddedanddbset : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Properties",
+                "realestate.Properties",
                 c => new
                     {
                         Name = c.String(nullable: false, maxLength: 128),
@@ -20,7 +20,7 @@ namespace RealEstate.Migrations
         
         public override void Down()
         {
-            DropTable("dbo.Properties");
+            DropTable("realestate.Properties");
         }
     }
 }
