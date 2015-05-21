@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Reflection;
 using NUnit.Framework;
+using RealEstate.Models;
 
 namespace RealEstateTests
 {
@@ -17,6 +19,20 @@ namespace RealEstateTests
 
             // Assert
             Assert.That(actual, Is.Not.Null);
+        }
+
+        [Test]
+        public void Model_HasProperty_Name()
+        {
+            // Arrange
+            Property sut = new Property();
+            string expected = "Name";
+
+            // Act
+            Type actual = sut.GetType();
+
+            // Assert
+            Assert.That(actual.GetProperty("Name"), Is.Not.Null);
         }
     }
 }
