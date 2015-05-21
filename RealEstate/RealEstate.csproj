@@ -129,16 +129,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\v1\PropertiesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505210045308_properties-added.cs" />
-    <Compile Include="Migrations\201505210045308_properties-added.Designer.cs">
-      <DependentUpon>201505210045308_properties-added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505210047410_properties-added-and-dbset.cs" />
-    <Compile Include="Migrations\201505210047410_properties-added-and-dbset.Designer.cs">
-      <DependentUpon>201505210047410_properties-added-and-dbset.cs</DependentUpon>
+    <Compile Include="Migrations\201505210314227_init.cs" />
+    <Compile Include="Migrations\201505210314227_init.Designer.cs">
+      <DependentUpon>201505210314227_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Property.cs" />
@@ -157,17 +154,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505210045308_properties-added.resx">
-      <DependentUpon>201505210045308_properties-added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505210047410_properties-added-and-dbset.resx">
-      <DependentUpon>201505210047410_properties-added-and-dbset.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505210314227_init.resx">
+      <DependentUpon>201505210314227_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -184,7 +177,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57592</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
