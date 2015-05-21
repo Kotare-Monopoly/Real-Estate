@@ -10,7 +10,7 @@ namespace RealEstateTests
         public void Model_Exists()
         {
             // Arrange
-            string expected = "RealEstate.Property";
+            string expected = "RealEstate.Models.Property, RealEstate";
 
             // Act
             var actual = Type.GetType(expected);
