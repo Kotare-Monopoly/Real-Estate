@@ -1,11 +1,12 @@
 # API documentation
 
-Properties are indexed by id. The version may change, but other aspects of the URI can be relied upon. Board is indexed from 0 - 39, where 0 is GO.
+Properties are indexed by `Id`. The version may change, but other aspects of the URI can be relied upon. `LocationId` indexes the board from 0 - 39, where 0 is GO. `Hours` is the value to deduct in the central hub.
 
 ## GET /api/v1/properties/1
 
     {
      "Id: 1",
+     "LocationId": 1,
      "Hours: 60
     }
 
@@ -13,16 +14,24 @@ Properties are indexed by id. The version may change, but other aspects of the U
 
     [
       {
-         "Id": 1,
+        "Id": 1,
+        "LocationId": 1,
+        "Hours": 60
+      },
+      {
+         "Id": 2,
+         "LocationId": 3,
          "Hours": 60
       },
       {
          "Id: 3",
-         "Hours: 60
+         "LocationId": 5,
+         "Hours": 200
       },
       {
-          "Id: 5",
-          "Hours: 200
+          "Id": 5,
+          "LocationId": 8,
+          "Hours": 100
       },
       ...
     ]
