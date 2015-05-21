@@ -1,6 +1,7 @@
 # API documentation
 
-Properties are indexed by `Id`. The version may change, but other aspects of the URI can be relied upon. `LocationId` indexes the board from 0 - 39, where 0 is GO. `Hours` is the value to deduct in the central hub.
+ * `LocationId` indexes the board from 0 - 39, where 0 is GO. 
+ * `Hours` is the value to deduct in the central hub.
 
 ## GET /api/v1/properties/1
 
