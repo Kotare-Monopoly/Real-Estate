@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace RealEstateTests
@@ -8,14 +7,16 @@ namespace RealEstateTests
     public class APITests
     {
         [Test]
-        public void Model_HasProperty_Name()
+        public void Model_Exists()
         {
             // Arrange
-
+            string expected = "RealEstate.Property";
 
             // Act
+            var actual = Type.GetType(expected);
 
             // Assert
+            Assert.That(actual, Is.Not.Null);
         }
     }
 }
